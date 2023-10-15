@@ -2,6 +2,7 @@ import java.util.Random;
 
 public class PersonUtils {
 
+    static Random rand = new Random();
     public static String UniqueIdGenerator(String regex, long length) {
         Random rand = new Random();
         String UniqueID = "";
@@ -31,5 +32,13 @@ public class PersonUtils {
         return sb.toString();
     }
 
+    public static void personCreator(){
 
+//        new Personel();
+//        String pName = Personel.getName();
+//        int pAge = Personel.getAge();
+//        String pID = Personel.getId();
+
+
+    }
 }

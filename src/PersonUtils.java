@@ -1,4 +1,7 @@
+import java.util.List;
 import java.util.Random;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class PersonUtils {
 
@@ -31,14 +34,21 @@ public class PersonUtils {
         }
         return sb.toString();
     }
+    public static int ageGenerator(){
+        int agegen = rand.nextInt(98) + 1;
+        return agegen;
 
-    public static void personCreator(){
+    }
 
-//        new Personel();
-//        String pName = Personel.getName();
-//        int pAge = Personel.getAge();
-//        String pID = Personel.getId();
+    public static void searchString(List list, String regex){
+        Pattern pattern = Pattern.compile(regex);
+        Matcher matcher = pattern.matcher(list.toString());
 
+        if (matcher.find()) {
+            System.out.println("match found!");
+        }
+        else
+            System.out.println("match not found!");
 
     }
 }

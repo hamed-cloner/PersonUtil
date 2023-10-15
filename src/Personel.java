@@ -8,20 +8,22 @@ public class Personel{
     private String id;
 
      Random random = new Random();
-    public Personel() {
+    public Personel(String name,int age,String id) {
         this.name = name;
         this.age = age;
         this.id = id;
 
     }
+
     public void setAge(int age) {
-        this.age = random.nextInt(98) + 1;
+        this.age = age;
     }
+
     public void setName(String name) {
-        this.name = PersonUtils.nameGenerator(5);
+        this.name = name;
     }
     public void setId(String id) {
-        this.id = PersonUtils.UniqueIdGenerator("[0-9]", 10);
+        this.id = id;
     }
     public String getName() {
         return name;
@@ -34,6 +36,10 @@ public class Personel{
     public String getId() {
         return id;
     }
+    @Override
+    public String toString(){
+        return this.name + "//" + this.age + "//" + this.id;
     }
+}
 
 

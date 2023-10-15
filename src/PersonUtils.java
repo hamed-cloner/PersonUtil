@@ -40,8 +40,8 @@ public class PersonUtils {
 
     }
 
-    public static void searchString(List list, String regex){
-        Pattern pattern = Pattern.compile(regex);
+    public static void searchString(List list, String name){
+        Pattern pattern = Pattern.compile(name);
         Matcher matcher = pattern.matcher(list.toString());
 
         if (matcher.find()) {

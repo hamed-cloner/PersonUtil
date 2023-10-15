@@ -12,7 +12,7 @@ public class Main {
         Collections.sort(people, new personComparator());
         System.out.println(people.toString());
 
-        PersonUtils.searchString(people, "[^ab]");
+        PersonUtils.searchString(people, "Hamed");
 
     }
 static class personComparator implements java.util.Comparator<Personel>{

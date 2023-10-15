@@ -16,6 +16,20 @@ public class PersonUtils {
             }
             length--;
         }
+
+
         return UniqueID;
     }
+
+    public static String nameGenerator(long NameLength){
+        String ExampleString = "ABCDEFGHIJKLMNOPQRSTUVWXYZ" + "abcdefghijklmnopqrstuvwxyz";
+        StringBuilder sb = new StringBuilder(Math.toIntExact(NameLength));
+        for(int i = 0 ; i < NameLength ; i++){
+            int index = (int)(ExampleString.length() * Math.random());
+            sb.append(ExampleString.charAt(index));
+        }
+        return sb.toString();
+    }
+
+
 }

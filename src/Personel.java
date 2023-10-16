@@ -1,6 +1,6 @@
 import java.util.Random;
 
-public class Personel{
+public class Personel {
 
 
     private String name;
@@ -36,10 +36,13 @@ public class Personel{
     public String getId() {
         return id;
     }
+
+
     @Override
     public String toString(){
-        return this.name + "//" + this.age + "//" + this.id;
+        return this.name;
     }
+
 }
 
 

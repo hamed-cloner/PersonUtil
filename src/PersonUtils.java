@@ -1,6 +1,6 @@
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
-import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class PersonUtils {
@@ -26,7 +26,7 @@ public class PersonUtils {
     }
 
     public static String nameGenerator(long NameLength){
-        String ExampleString = "ABCDEFGHIJKLMNOPQRSTUVWXYZ" + "abcdefghijklmnopqrstuvwxyz";
+        String ExampleString = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
         StringBuilder sb = new StringBuilder(Math.toIntExact(NameLength));
         for(int i = 0 ; i < NameLength ; i++){
             int index = (int)(ExampleString.length() * Math.random());
@@ -40,15 +40,17 @@ public class PersonUtils {
 
     }
 
-    public static void searchString(List list, String name){
-        Pattern pattern = Pattern.compile(name);
-        Matcher matcher = pattern.matcher(list.toString());
 
-        if (matcher.find()) {
-            System.out.println("match found!");
+    public static List<String> searchString(List<String> list, String regex) {
+        List<String> matched = new ArrayList<String>();
+        Pattern p = Pattern.compile(regex);
+
+        for(String s:list){
+            if(p.matcher(s).matches()){
+                matched.add(s);
+            }
         }
-        else
-            System.out.println("match not found!");
-
+        return matched;
     }
+
 }

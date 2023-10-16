@@ -13,7 +13,7 @@ public class Main {
         System.out.println(Collections.singletonList(people.toString()));
 
 //        PersonUtils.searchString(people, "[^abcdefg]");
-        System.out.println(PersonUtils.searchString(Collections.singletonList(people.toString()), "^A"));
+        System.out.println(PersonUtils.searchString(Collections.singletonList(people.toString()), "[^ab]"));
 
 //        PersonUtils.searchString(people, "[^abc]");
 

@@ -42,7 +42,7 @@ public class Personel {
 
     @Override
     public String toString(){
-        return this.name + "//" + this.age + "//" + this.id ;
+        return this.name + "-" + this.age + "-" + this.id ;
     }
 
 

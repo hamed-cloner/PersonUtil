@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 import java.util.Random;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -57,5 +58,9 @@ public class PersonUtils {
         }
         return matched;
     }
-
+    public static <K, V> void printMap(Map<K,V> map){
+        for (Map.Entry<K, V> entry : map.entrySet()){
+            System.out.println("Age : " + entry.getKey() + " Persons : " + entry.getValue() );
+        }
+    }
 }

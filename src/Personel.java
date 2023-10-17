@@ -1,5 +1,3 @@
-import java.util.Random;
-
 public class Personel {
 
 
@@ -7,7 +5,6 @@ public class Personel {
     private int age;
     private String id;
 
-     Random random = new Random();
     public Personel(String name,int age,String id) {
         this.name = name;
         this.age = age;
@@ -40,6 +37,8 @@ public class Personel {
 
 
 
+
+    //Overrides toString method to convert the output of an object list to a type of readable String
     @Override
     public String toString(){
         return this.name + "-" + this.age + "-" + this.id ;

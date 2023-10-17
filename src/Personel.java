@@ -13,6 +13,7 @@ public class Personel {
         this.age = age;
         this.id = id;
 
+
     }
 
     public void setAge(int age) {
@@ -38,10 +39,12 @@ public class Personel {
     }
 
 
+
     @Override
     public String toString(){
         return this.name + "//" + this.age + "//" + this.id ;
     }
+
 
 }
 

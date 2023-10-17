@@ -1,6 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
+import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class PersonUtils {
@@ -45,9 +46,13 @@ public class PersonUtils {
         List<String> matched = new ArrayList<String>();
         Pattern p = Pattern.compile(regex);
 
-        for(String s:list){
-            if(p.matcher(s).matches()){
-                matched.add(s);
+        for(int n = 0; n < list.size(); n++){
+            String item = list.get(n);
+            Matcher m = p.matcher(item);
+            if (m.find()) {
+                matched.add(item);}
+            else {
+                continue;
             }
         }
         return matched;

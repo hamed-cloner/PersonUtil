@@ -12,10 +12,12 @@ public class Main {
         Collections.sort(people, new personComparator());
         System.out.println(Collections.singletonList(people.toString()));
 
-//        PersonUtils.searchString(people, "[^abcdefg]");
-        System.out.println(PersonUtils.searchString(Collections.singletonList(people.toString()), "[^ab]"));
 
-//        PersonUtils.searchString(people, "[^abc]");
+        List<String> copyOfPeople = new ArrayList<>();
+        for (int k = 0; k < people.size(); k++){
+            copyOfPeople.add(people.get(k).toString());
+        }
+        System.out.println(PersonUtils.searchString(copyOfPeople, "^A"));
 
 
     }
@@ -27,6 +29,7 @@ public class Main {
             return a.getAge() - b.getAge();
         }
     }
+
 }
 
 
